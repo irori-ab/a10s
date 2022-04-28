@@ -2,6 +2,12 @@ mp:
   messaging:
     incoming:
       'audit-events':
+        connector: smallrye-kafka
         topic: "k8s-achievements.ingestion.audit-events.json"
+        value:
+          deserializer: se.irori.kafka.AuditEventDeserializer
       'kubernetes-events':
+        connector: smallrye-kafka
         topic: "k8s-achievements.ingestion.kubernetes-events.json"
+        value:
+          deserializer: se.irori.kafka.AuditEventDeserializer

@@ -1,9 +1,10 @@
 package se.irori.model.events;
 
 import java.time.LocalDateTime;
+import lombok.Data;
 import lombok.Getter;
 
-@Getter
+@Data
 public class AuditEvent {
   private String userName;
   private String userId;
