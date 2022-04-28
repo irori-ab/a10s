@@ -1,56 +1,19 @@
-# a10s Project
+# a10s: Make Kubernetes fun again
 
-This project uses Quarkus, the Supersonic Subatomic Java Framework.
+**Strömma Audit-loggen**:
+1. Ta reda på vilket objekt det gäller (nyckel: apiVersion/namespace/resource/name)
+2. Avgör om objektet skapades / uppdaterades / lästes / togs bort (utifrån verb)
+3. Notera användaren för audit-eventet
+4. Uppdatera set:et med kända k8s-objekt utifrån nyckeln:
 
-If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
+   1. Skapa objekt om det behövs (createdBy, createdTs)
+   2. Uppdatera objektet om det förändrades (updatedBy, updatedTs)
+   3. Uppdatera objektet om det lästes (watchedBy, watchedTs)
+   4. Markera att objektet togs bort (deletedBy, deletedTs)
 
-## Running the application in dev mode
 
-You can run your application in dev mode that enables live coding using:
-```shell script
-./mvnw compile quarkus:dev
-```
-
-> **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at http://localhost:8080/q/dev/.
-
-## Packaging and running the application
-
-The application can be packaged using:
-```shell script
-./mvnw package
-```
-It produces the `quarkus-run.jar` file in the `target/quarkus-app/` directory.
-Be aware that it’s not an _über-jar_ as the dependencies are copied into the `target/quarkus-app/lib/` directory.
-
-The application is now runnable using `java -jar target/quarkus-app/quarkus-run.jar`.
-
-If you want to build an _über-jar_, execute the following command:
-```shell script
-./mvnw package -Dquarkus.package.type=uber-jar
-```
-
-The application, packaged as an _über-jar_, is now runnable using `java -jar target/*-runner.jar`.
-
-## Creating a native executable
-
-You can create a native executable using: 
-```shell script
-./mvnw package -Pnative
-```
-
-Or, if you don't have GraalVM installed, you can run the native executable build in a container using: 
-```shell script
-./mvnw package -Pnative -Dquarkus.native.container-build=true
-```
-
-You can then execute your native executable with: `./target/a10s-1.0.0-SNAPSHOT-runner`
-
-If you want to learn more about building native executables, please consult https://quarkus.io/guides/maven-tooling.
-
-## Provided Code
-
-### RESTEasy Reactive
-
-Easily start your Reactive RESTful Web Services
-
-[Related guide section...](https://quarkus.io/guides/getting-started-reactive#reactive-jax-rs-resources)
+**Strömma Event-loggen**:
+1. Filtrera ut enbart events av de typer vi är intresserade av
+2. Ta reda på vilket objekt eventet avser (nyckel: apiVersion/namespace/resource/name (resource måste mappas från Kind))
+3. Berika med set:et av kända K8s-objekt
+4. Lägg det berikade meddelandet på ny Kafka-topic
