@@ -8,8 +8,8 @@ public class Achievement {
   private String name;
   private String description;
   private boolean isHidden;
-  private AchivementArea area;
-  private AchivementDifficulty difficulty;
+  private AchievementArea area;
+  private AchievementDifficulty difficulty;
   private Integer reward;
   private List<UUID> dependsOn;
   private AchievementDefinition achievementDefinition;
