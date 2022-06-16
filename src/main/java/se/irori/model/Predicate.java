@@ -1,5 +1,5 @@
 package se.irori.model;
 
 public enum Predicate {
-  CREATE, DELETE, UPDATE, READ;
+  LIST, CREATE, DELETE, PATCH, GET, WATCH;
 }
