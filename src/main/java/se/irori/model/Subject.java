@@ -1,8 +1,10 @@
 package se.irori.model;
 
 import java.util.UUID;
+import lombok.Builder;
 
-public class User {
+@Builder
+public class Subject {
   private UUID id;
   private String name;
 }
