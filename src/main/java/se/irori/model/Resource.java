@@ -6,4 +6,5 @@ import lombok.Builder;
 public class Resource {
   String name;
   String namespace;
+  String type;
 }
