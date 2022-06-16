@@ -1,5 +1,6 @@
 package se.irori.model;
 
+import java.util.Locale;
 import java.util.UUID;
 import lombok.Builder;
 import lombok.Getter;
@@ -20,7 +21,7 @@ public class SubjectAction {
                 .id(UUID.fromString(auditEvent.getUserId()))
                 .name(auditEvent.getUserName())
                 .build())
-        .predicate(Predicate.from(auditEvent.getVerb()))
+        .predicate(Predicate.valueOf(auditEvent.getVerb().toUpperCase(Locale.ROOT)))
         .resource(Resource.builder()
             .name(auditEvent.getObjectName())
             .namespace(auditEvent.getObjectNamespace()).build()).build();
