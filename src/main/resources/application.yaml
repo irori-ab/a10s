@@ -11,3 +11,7 @@ mp:
         topic: "k8s-achievements.ingestion.kubernetes-events.json"
         value:
           deserializer: se.irori.kafka.AuditEventDeserializer
+    outgoing:
+      'subject-actions':
+        connector: smallrye-kafka
+        topic: "k8s-achievements.processing.subject-actions.json"
