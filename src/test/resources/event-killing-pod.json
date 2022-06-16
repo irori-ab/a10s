@@ -1,0 +1,142 @@
+{
+    "old_event":
+    {
+        "metadata":
+        {
+            "name": "kafka-rh-sandbox-kafka-0.16f916822787264b",
+            "namespace": "kafka",
+            "uid": "e3e174fe-e29d-4ed3-b174-567b69bbcabe",
+            "resourceVersion": "230061182",
+            "creationTimestamp": "2022-06-16T11:31:26Z",
+            "managedFields":
+            [
+                {
+                    "manager": "kubelet",
+                    "operation": "Update",
+                    "apiVersion": "v1",
+                    "time": "2022-06-16T11:31:26Z",
+                    "fieldsType": "FieldsV1"
+                }
+            ]
+        },
+        "involvedObject":
+        {
+            "kind": "Pod",
+            "namespace": "kafka",
+            "name": "kafka-rh-sandbox-kafka-0",
+            "uid": "95f9540e-35b5-4562-84a1-c6e3a3c7b2d8",
+            "apiVersion": "v1",
+            "resourceVersion": "214012576",
+            "fieldPath": "spec.containers{kafka}"
+        },
+        "reason": "Killing",
+        "message": "Stopping container kafka",
+        "source":
+        {
+            "component": "kubelet",
+            "host": "ocp-jr5lj-worker-c-d5djc"
+        },
+        "firstTimestamp": "2022-06-16T11:31:26Z",
+        "lastTimestamp": "2022-06-16T11:31:26Z",
+        "count": 1,
+        "type": "Normal"
+    },
+    "docker":
+    {
+        "container_id": "16e8d68bb8bbc9ce6bec52db7b4ede87c3e4ea5089f913c6eecbf567d81c67ca"
+    },
+    "kubernetes":
+    {
+        "container_name": "kube-eventrouter",
+        "namespace_name": "event-router",
+        "pod_name": "eventrouter-7f4b985c8d-wnw5r",
+        "container_image": "registry.redhat.io/openshift-logging/eventrouter-rhel8:v0.3",
+        "container_image_id": "registry.redhat.io/openshift-logging/eventrouter-rhel8@sha256:25e88ac66fb35ca4e567ba3b34d789425abcde3f6767ed0e80ed49e266328cfe",
+        "pod_id": "2ffb490a-d57c-4692-8b45-16906d8ab992",
+        "pod_ip": "10.128.5.119",
+        "host": "ocp-jr5lj-worker-c-nv8fl",
+        "labels":
+        {
+            "component": "eventrouter",
+            "logging-infra": "eventrouter",
+            "pod-template-hash": "7f4b985c8d",
+            "provider": "openshift"
+        },
+        "master_url": "https://kubernetes.default.svc",
+        "namespace_id": "a3ec8aab-7c73-433e-a575-9bf4f48ca369",
+        "namespace_labels":
+        {
+            "argocd_argoproj_io/instance": "rh-sandbox-cm",
+            "kubernetes_io/metadata_name": "event-router"
+        },
+        "event":
+        {
+            "metadata":
+            {
+                "name": "kafka-rh-sandbox-kafka-0.16f916822787264b",
+                "namespace": "kafka",
+                "uid": "e3e174fe-e29d-4ed3-b174-567b69bbcabe",
+                "resourceVersion": "230061182",
+                "managedFields":
+                [
+                    {
+                        "manager": "kubelet",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2022-06-16T11:31:26Z",
+                        "fieldsType": "FieldsV1"
+                    }
+                ]
+            },
+            "involvedObject":
+            {
+                "kind": "Pod",
+                "namespace": "kafka",
+                "name": "kafka-rh-sandbox-kafka-0",
+                "uid": "95f9540e-35b5-4562-84a1-c6e3a3c7b2d8",
+                "apiVersion": "v1",
+                "resourceVersion": "214012576",
+                "fieldPath": "spec.containers{kafka}"
+            },
+            "reason": "Killing",
+            "source":
+            {
+                "component": "kubelet",
+                "host": "ocp-jr5lj-worker-c-d5djc"
+            },
+            "firstTimestamp": "2022-06-16T11:31:26Z",
+            "lastTimestamp": "2022-06-16T11:31:26Z",
+            "count": 1,
+            "type": "Normal",
+            "verb": "UPDATED"
+        }
+    },
+    "message": "Stopping container kafka",
+    "level": "unknown",
+    "hostname": "ocp-jr5lj-worker-c-nv8fl",
+    "pipeline_metadata":
+    {
+        "collector":
+        {
+            "original_raw_message": "{\"verb\":\"UPDATED\",\"event\":
+            {\"metadata\":{\"name\":\"kafka-rh-sandbox-kafka-0.16f916822787264b\",\"namespace\":\"kafka\",\"uid\":\"e3e174fe-e29d-4ed3-b174-567b69bbcabe\",\"resourceVersion\":\"230061182\",\"creationTimestamp\":\"2022-06-16T11:31:26Z\",\"managedFields\":
+            [{\"manager\":\"kubelet\",\"operation\":\"Update\",\"apiVersion\":\"v1\",\"time\":\"2022-06-16T11:31:26Z\",\"fieldsType\":\"FieldsV1\",\"fieldsV1\":{\"f:count\":{},\"f:firstTimestamp\":{},\"f:involvedObject\":{\"f:apiVersion\":{},\"f:fieldPath\":{},\"f:kind\":{},\"f:name\":{},\"f:namespace\":{},\"f:resourceVersion\":{},\"f:uid\":{}},\"f:lastTimestamp\":{},\"f:message\":{},\"f:reason\":{},\"f:source\":{\"f:component\":{},\"f:host\":{}},\"f:type\":{}}}]},\"involvedObject\":{\"kind\":\"Pod\",\"namespace\":\"kafka\",\"name\":\"kafka-rh-sandbox-kafka-0\",\"uid\":\"95f9540e-35b5-4562-84a1-c6e3a3c7b2d8\",\"apiVersion\":\"v1\",\"resourceVersion\":\"214012576\",\"fieldPath\":\"spec.containers{kafka}\"},\"reason\":\"Killing\",\"message\":\"Stopping container kafka\",\"source\":{\"component\":\"kubelet\",\"host\":\"ocp-jr5lj-worker-c-d5djc\"},\"firstTimestamp\":\"2022-06-16T11:31:26Z\",\"lastTimestamp\":\"2022-06-16T11:31:26Z\",\"count\":1,\"type\":\"Normal\",\"eventTime\":null,\"reportingComponent\":\"\",\"reportingInstance\":\"\"},\"old_event\":{\"metadata\":{\"name\":\"kafka-rh-sandbox-kafka-0.16f916822787264b\",\"namespace\":\"kafka\",\"uid\":\"e3e174fe-e29d-4ed3-b174-567b69bbcabe\",\"resourceVersion\":\"230061182\",\"creationTimestamp\":\"2022-06-16T11:31:26Z\",\"managedFields\":[{\"manager\":\"kubelet\",\"operation\":\"Update\",\"apiVersion\":\"v1\",\"time\":\"2022-06-16T11:31:26Z\",\"fieldsType\":\"FieldsV1\",\"fieldsV1\":{\"f:count\":{},\"f:firstTimestamp\":{},\"f:involvedObject\":{\"f:apiVersion\":{},\"f:fieldPath\":{},\"f:kind\":{},\"f:name\":{},\"f:namespace\":{},\"f:resourceVersion\":{},\"f:uid\":{}},\"f:lastTimestamp\":{},\"f:message\":{},\"f:reason\":{},\"f:source\":{\"f:component\":{},\"f:host\":{}},\"f:type\":{}}}]},\"involvedObject\":{\"kind\":\"Pod\",\"namespace\":\"kafka\",\"name\":\"kafka-rh-sandbox-kafka-0\",\"uid\":\"95f9540e-35b5-4562-84a1-c6e3a3c7b2d8\",\"apiVersion\":\"v1\",\"resourceVersion\":\"214012576\",\"fieldPath\":\"spec.containers{kafka}\"},\"reason\":\"Killing\",\"message\":\"Stopping container kafka\",\"source\":{\"component\":\"kubelet\",\"host\":\"ocp-jr5lj-worker-c-d5djc\"},\"firstTimestamp\":\"2022-06-16T11:31:26Z\",\"lastTimestamp\":\"2022-06-16T11:31:26Z\",\"count\":1,\"type\":\"Normal\",\"eventTime\":null,\"reportingComponent\":\"\",\"reportingInstance\":\"\"}}",
+            "ipaddr4": "10.0.32.13",
+            "inputname": "fluent-plugin-systemd",
+            "name": "fluentd",
+            "received_at": "2022-06-16T11:32:47.773252+00:00",
+            "version": "1.7.4 1.6.0"
+        }
+    },
+    "openshift":
+    {
+        "labels":
+        {
+            "logType": "kubernetes-events",
+            "topic": "k8s-achievements.ingestion.kubernetes-events.json"
+        }
+    },
+    "@timestamp": "2022-06-16T11:31:26Z",
+    "viaq_index_name": "app-write",
+    "viaq_msg_id": "e3e174fe-e29d-4ed3-b174-567b69bbcabe"
+}

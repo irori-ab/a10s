@@ -1,0 +1,78 @@
+{
+    "kind": "Event",
+    "apiVersion": "audit.k8s.io/v1",
+    "level": "Metadata",
+    "auditID": "72571137-d650-4782-b136-c9034236df57",
+    "stage": "ResponseComplete",
+    "requestURI": "/api/v1/namespaces/kafka/pods/kafka-rh-sandbox-kafka-0",
+    "verb": "delete",
+    "user":
+    {
+        "username": "gustav.norbacker@irori.se",
+        "uid": "ad3db1cb-28bc-48c5-842b-104fcd0444eb",
+        "groups":
+        [
+            "irori-all",
+            "system:authenticated:oauth",
+            "system:authenticated"
+        ],
+        "extra":
+        {
+            "scopes.authorization.openshift.io":
+            [
+                "user:full"
+            ]
+        }
+    },
+    "sourceIPs":
+    [
+        "213.179.7.11",
+        "10.130.2.14",
+        "10.128.0.15"
+    ],
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36",
+    "objectRef":
+    {
+        "resource": "pods",
+        "namespace": "kafka",
+        "name": "kafka-rh-sandbox-kafka-0",
+        "apiVersion": "v1"
+    },
+    "responseStatus":
+    {
+        "code": 200
+    },
+    "requestReceivedTimestamp": "2022-06-16T11:31:26.278356Z",
+    "stageTimestamp": "2022-06-16T11:31:26.291295Z",
+    "annotations":
+    {
+        "authorization.k8s.io/decision": "allow",
+        "authorization.k8s.io/reason": "RBAC: allowed by ClusterRoleBinding \"irori-all-cluster-admin\" of ClusterRole \"cluster-admin\" to Group \"irori-all\""
+    },
+    "k8s_audit_level": "Metadata",
+    "message": null,
+    "hostname": "ocp-jr5lj-master-0.europe-west4-a.c.sandbox-kafka.internal",
+    "pipeline_metadata":
+    {
+        "collector":
+        {
+            "ipaddr4": "10.0.0.4",
+            "inputname": "fluent-plugin-systemd",
+            "name": "fluentd",
+            "received_at": "2022-06-16T11:31:26.293903+00:00",
+            "version": "1.7.4 1.6.0"
+        }
+    },
+    "openshift":
+    {
+        "labels":
+        {
+            "logType": "audit",
+            "topic": "k8s-achievements.ingestion.audit-events.json"
+        }
+    },
+    "@timestamp": "2022-06-16T11:31:26.293018+00:00",
+    "viaq_index_name": "audit-write",
+    "viaq_msg_id": "MTEyYzZlNzQtNTliMC00MTlmLWFkZjEtYTZhZDkxZTUzMzk1",
+    "log_type": "audit"
+}
