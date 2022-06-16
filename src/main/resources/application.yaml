@@ -1,5 +1,16 @@
+kafka:
+  bootstrap:
+    servers: kafka-bootstrap.rh-sandbox.irori.se
 mp:
   messaging:
+    connector:
+      smallrye-kafka:
+        security:
+          #protocol: SSL
+        ssl:
+          truststore:
+            #location: something.jks
+            #password: xyz
     incoming:
       'audit-events':
         connector: smallrye-kafka
